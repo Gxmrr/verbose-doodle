@@ -1,0 +1,22 @@
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Parent = screenGui
+frame.Size = UDim2.new(1, 0, 1, 0) -- На весь экран
+frame.BackgroundColor3 = Color3.new(0, 0, 0) -- Чёрный фон
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = frame
+textLabel.Size = UDim2.new(1, 0, 1, 0) -- На весь экран
+textLabel.BackgroundTransparency = 1 -- Прозрачный фон текста
+textLabel.Text = "Твой аккаунт теперь наш, поплачь сын кашёлки"
+textLabel.TextColor3 = Color3.new(1, 0, 0) -- Красный текст
+textLabel.TextScaled = true -- Масштабируем текст
+textLabel.Font = Enum.Font.GothamBlack -- Стиль шрифта
+
+local sound = Instance.new("Sound")
+sound.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+sound.SoundId = "rbxassetid://YOUR_SOUND_ASSET_ID" -- Замените YOUR_SOUND_ASSET_ID на ID звука
+sound.Volume = 5
+sound:Play()
